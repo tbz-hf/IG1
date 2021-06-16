@@ -31,7 +31,8 @@ Ansprechbar im Browser mittels:
 * [http://${ADDR}:1880](http://${ADDR}:1880)
 
 **Links**
- * [Home Page](https://nodered.org/)
- * [Node-RED Einführung](https://www.youtube.com/watch?v=f5o4tIz2Zzc)
+
+* [Home Page](https://nodered.org/)
+* [Node-RED Einführung](https://www.youtube.com/watch?v=f5o4tIz2Zzc)
 
 Innerhalt von Node-RED kann der Mosquitto Broker mit DNS Namen `mosquitto` und Port `1883` angesprochen werden. Ausserhalb mit ${ADDR} und Port `1883`.
