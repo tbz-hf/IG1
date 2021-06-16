@@ -2,10 +2,12 @@
 
 IT-Grundlagen Hardwaretechnik
 
+***
 ### Node-RED
 
 [http://${ADDR}:1880](http://${ADDR}:1880)
 
+***
 ### Mosquitto Broker und Clients
 
 Ansprechbar mittels den Mosquitto Clients Programmen, z.B. um Daten zu senden:
@@ -16,6 +18,7 @@ und Daten von einem Topic zu empfangen:
 
   mosquitto_sub -h ${ADDR} -t iotkit/alert/#  
 
+***
 ### Samba/SMB
 
 Seit 1992 bietet [Samba](https://www.samba.org/) sichere, stabile und schnelle Datei- und Druckdienste für alle Clients, die das SMB / CIFS-Protokoll verwenden, z. B. alle DOS- und Windows-Versionen, OS / 2, Linux und viele andere.
