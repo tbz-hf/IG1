@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mosquitto
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mosquitto
+  template:
+    metadata:
+      labels:
+        app: mosquitto
+        group: iot
+        tier: middleware
+    spec:
+      containers:
+      - name: mosquitto
+        image: registry.gitlab.com/mc-b/iot-kafka/eclipse-mosquitto:1.6.14
+        imagePullPolicy: IfNotPresent        
+        ports:
+        - containerPort: 1883
+          hostPort: 1883        
+        stdin: true 
+        tty: true         
