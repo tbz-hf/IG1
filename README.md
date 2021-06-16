@@ -1,16 +1,21 @@
 # IG1
 
-IT-Grundlagen Hardwaretechnik
+IT-Grundlagen Hardwaretechnik.
+
+Auf dem Server sind folgende Services installiert:
 
 ***
 ### Node-RED
 
- * [Home Page](https://nodered.org/)
- * [Node-RED Einführung](https://www.youtube.com/watch?v=f5o4tIz2Zzc)
+Node-RED ist ein von IBM entwickeltes grafisches Entwicklungswerkzeug. Die Software ermöglicht es, Anwendungsfälle im Bereich des Internets der Dinge mit einem einfachen Baukastenprinzip umzusetzen. Die einzelnen Funktionsbausteine werden durch Ziehen von Verbindungen verbunden
 
 Ansprechbar im Browser mittels:
 
 * [http://${ADDR}:1880](http://${ADDR}:1880)
+
+**Links**
+ * [Home Page](https://nodered.org/)
+ * [Node-RED Einführung](https://www.youtube.com/watch?v=f5o4tIz2Zzc)
 
 ***
 ### Mosquitto Broker und Clients
@@ -23,20 +28,9 @@ MQTT implementiert das [**Publish/Subscribe-Pattern**](http://de.wikipedia.org/w
 
 Ansprechbar mittels den Mosquitto Clients Programmen, z.B. um Daten zu senden:
 
-  mosquitto_pub -h ${ADDR} -t "iotkit/actors/servo2" -m "0.1" -q 0  
+    mosquitto_pub -h ${ADDR} -t "iotkit/actors/servo2" -m "0.1" -q 0  
   
 und Daten von einem Topic zu empfangen:
 
-  mosquitto_sub -h ${ADDR} -t iotkit/alert/#  
-
-***
-### Samba/SMB
-
-Seit 1992 bietet [Samba](https://www.samba.org/) sichere, stabile und schnelle Datei- und Druckdienste für alle Clients, die das SMB / CIFS-Protokoll verwenden, z. B. alle DOS- und Windows-Versionen, OS / 2, Linux und viele andere.
-
-Auf dem Server ist Samba aktiviert und das Verzeichnis `/home/ubuntu/data` als Share `data` freigegeben.
-
-Zugriff mittels:
-
-[\\\\${ADDR}\data](\\\\${ADDR}\data)
+    mosquitto_sub -h ${ADDR} -t iotkit/alert/#  
 
