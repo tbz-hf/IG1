@@ -5,7 +5,7 @@
 # 
 
 # Services
-# sudo microk8s kubectl apply -f ~/IG1/mosquitto.yaml
+sudo microk8s kubectl apply -f ~/IG1/mosquitto.yaml
 sudo microk8s kubectl apply -f ~/IG1/nodered.yaml
 
 # MQTT CLI
