@@ -14,10 +14,18 @@ spec:
         group: iot
         tier: frontend
     spec:
+      volumes:
+        - name: nodered-pv-storage
+          hostPath:
+            path: /home/ubuntu/data
+            type: Directory
       containers:
       - name: nodered
-        image: registry.gitlab.com/mc-b/iot-kafka/node-red-kafka
+        image: nodered/node-red
         ports:
         - containerPort: 1880
           hostPort: 1880
-          
+        volumeMounts:
+         - name: nodered-pv-storage
+           mountPath: /data
+           
