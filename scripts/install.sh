@@ -11,5 +11,8 @@ sudo microk8s kubectl apply -f ~/IG1/nodered.yaml
 # MQTT CLI
 sudo apt-get install -y mosquitto-clients
 
+# Library (Beispiele kopieren)
+cp -rp lib ../data/
+
 # Introseite 
 bash -x /opt/lernmaas/helper/intro
