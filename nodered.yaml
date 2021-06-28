@@ -21,7 +21,7 @@ spec:
             type: Directory
       containers:
       - name: nodered
-        image: registry.gitlab.com/mc-b/iot-kafka/node-red:latest-12
+        image: registry.gitlab.com/mc-b/iot-kafka/node-red:v1.3.5
         ports:
         - containerPort: 1880
           hostPort: 1880
