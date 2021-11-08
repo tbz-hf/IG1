@@ -6,7 +6,8 @@
 
 # Services
 sudo microk8s kubectl apply -f ~/IG1/mosquitto.yaml
-sudo microk8s kubectl apply -f ~/IG1/nodered.yaml
+# sudo microk8s kubectl apply -f ~/IG1/nodered.yaml # Container bekommt keine Verbindung zum VPN Netzwerk
+sudo snap install node-red
 
 # MQTT CLI
 sudo apt-get install -y mosquitto-clients
